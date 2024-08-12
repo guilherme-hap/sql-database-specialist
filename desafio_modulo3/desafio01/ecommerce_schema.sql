@@ -10,7 +10,6 @@ CREATE TABLE clients(
     lName VARCHAR(20),
     cpf CHAR(11) NOT NULL,
 	address VARCHAR(100),
-	-- bDate DATE(),
     CONSTRAINT unique_cpf_client UNIQUE(cpf)
 );
 
@@ -22,7 +21,7 @@ CREATE TABLE products(
     pName VARCHAR(50) NOT NULL,
     classificationKids BOOL DEFAULT FALSE,
     category ENUM('Eletrônicos', 'Vestimentas', 'Brinquedos', 'Alimentos', 'Móveis') NOT NULL,
-	rating FLOAT DEFAULT 0,
+    rating FLOAT DEFAULT 0,
     size VARCHAR(10) -- Dimensão do produto
 );
 

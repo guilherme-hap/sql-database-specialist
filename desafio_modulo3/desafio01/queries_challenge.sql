@@ -68,7 +68,7 @@ ORDER BY
 
 -- Retorna a relação dos nomes dos fornecedores e dos nomes dos produtos e quantidades
 SELECT
-		pName AS Nome, businessName AS Fornecedor, quantity AS Quantidade
+	pName AS Nome, businessName AS Fornecedor, quantity AS Quantidade
 FROM
 	products
     INNER JOIN productsSuppliers
