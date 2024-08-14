@@ -33,7 +33,7 @@ CREATE TABLE orders(
     orderDescription VARCHAR(255),
     shipping FLOAT DEFAULT 10,
     paymentCash BOOL DEFAULT FALSE,
-    CONSTRAINT fk_orders_clients FOREIGN KEY(orderIdClient) REFERENCES clients(clientId)
+    CONSTRAINT fk_orders_clients FOREIGN KEY(orderIdClient) REFERENCES clients(clientId) ON UPDATE CASCADE ON DELETE CASCADE
 );
 
 -- Criação da tabela productsStorage
