@@ -1,0 +1,14 @@
+Para chegar ao diretório em que os comandos serão executados:
+cd '.\Program Files\' > cd '.\MySQL Server 8.0\' > cd .\bin\
+
+Backup do banco de dados ecommerce com todos os dados:
+mysqldump -u root -p ecommerce > all-data_ecommerce_backup.sql
+
+Backup do banco de dados ecommerce com apenas o schema, rotinas e indexes do banco:
+mysqldump --no-data --routines --events -u root -p ecommerce > schema_ecommerce_backup.sql
+
+Backup do banco de dados ecommerce com apenas a inserção de dados:
+mysqldump --no-create-info -u root -p ecommerce > data-only_ecommerce_backup.sql
+
+Recovery do banco de dados ecommerce (Para fazer dessa forma, primeiro dê um DROP no database)
+mysql -u root -p < all-data_ecommerce_backup.sql
